@@ -9,7 +9,10 @@ public:
 	BankAccount(std::string account_name) :account_name(account_name),id(nextId++){};
 	int getId()  { return id; };
 	std::string getAccountName(){ return account_name; };
+	virtual void deposit(const Currency &amount){};
 	//BankAccount(const Currency &balance = 0);
+protected:
+	Currency balance;
 private:
 		int id;
 		std::string account_name;

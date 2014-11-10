@@ -11,16 +11,18 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	
-	//Currency h;
+	Currency h(9, 9);
 	Name n("Pacheco", "Hector");
 	Name n2("Apolo", "Roko");
 	Name n3("Pacheco", "Israel");
 	
 	Customer c(n);
 	BankAccount a("Savings");
+	a.deposit(h);
 	BankAccount b("Deposit");
 
 	c.add(&a);
+	
 	c.add(&b);
 	
 
